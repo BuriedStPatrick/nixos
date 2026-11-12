@@ -40,11 +40,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794499073,
-        "narHash": "sha256-vVsag7BRVQxDI8l3wKlqeIr7s7YNjvFMMDFWjEGu7hc=",
+        "lastModified": 1794499473,
+        "narHash": "sha256-z1JEoNO93+2AQNq5FX0Iz77REFNQUTRhB3hG/78lpf0=",
         "owner": "bury-os",
         "repo": "bury-quickshell",
-        "rev": "ce1805cd74811f88cf9e4d72816584acff198436",
+        "rev": "3570318a288bd7a18200486085447334d8280ad4",
         "type": "github"
       },
       "original": {
