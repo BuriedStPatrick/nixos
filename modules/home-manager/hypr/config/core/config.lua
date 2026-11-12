@@ -1,0 +1,5 @@
+require('core.input')
+require('core.keybindings')
+require('core.monitors')
+require('core.colors')
+require('core.animations')

@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, inputs, pkgs, ... }:
+{ myConfig, inputs, pkgs, ... }:
 
 {
   imports =
@@ -36,10 +36,28 @@
 
   # Enable Hyprland flake build cache
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [
+      "https://hyprland.cachix.org"
+      "https://nix-community.cachix.org"
+      "https://cache.nixos.org/"
+    ];
+    trusted-substituters = [
+      "https://hyprland.cachix.org"
+    ];
+    trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
     trusted-users = ["root" "@wheel"];
+  };
+
+  # Enable hyprland at the system level
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   fonts.packages = with pkgs; [
@@ -77,6 +95,7 @@
     variant = "";
   };
 
+  # Enable flatpaks
   services.flatpak.enable = true;
 
   # Enable CUPS to print documents.
@@ -90,8 +109,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    # jack.enable = true;
+    jack.enable = true;
  };
 
   virtualisation.podman = {
@@ -104,12 +122,12 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-  
+
   # Add legacy group for Moonlander flashing support
   users.groups.plugdev = {};
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."patrick" = {
+  users.users."${myConfig.username}" = {
     isNormalUser = true;
     useDefaultShell = true;
     description = "Patrick Christensen";
@@ -119,17 +137,11 @@
     ];
   };
 
-  # Install firefox.
+  # Install firefox at the system level.
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland; 
-  };
+  # Enable ZSH at the system level.
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -137,16 +149,16 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
-    neovim
     keymapp
   ];
 
   environment.shellAliases = {
-    nixbuild = "sudo nixos-rebuild switch --flake /home/patrick/nixos/#nixos";
-    nixedit = "nvim /home/patrick/nixos/configuration.nix";
-    nixclean = "nix-collect-garbage -d";
+    nixbuild = "sudo nixos-rebuild switch --flake ~/nixos/#nixos";
+    nixedit = "nvim ~/nixos/configuration.nix";
+    nixclean = "sudo nix-collect-garbage -d";
+    nixupgrade = "cd ~/nixos && sudo nix flake update && cd -";
   };
 
   environment.sessionVariables = rec {
@@ -172,7 +184,7 @@
   services.openssh.enable = true;
   programs.ssh.startAgent = true;
 
-  nix.gc = { 
+  nix.gc = {
     automatic = true;
     dates = "weekly";
   };
