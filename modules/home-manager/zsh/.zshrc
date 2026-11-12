@@ -107,7 +107,9 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64
 
 # VSCodium
 if command -v vscodium 2>&1 >/dev/null; then
-  alias code='/usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland'
+  alias code='vscodium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland'
+elif command -v codium 2>&1 >/dev/null; then
+  alias code='codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland'
 fi
 
 # Podman testcontainers support
