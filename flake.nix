@@ -15,22 +15,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-    };
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    split-monitor-workspaces = {
-      url = "github:zjeffer/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     bury-quickshell = {
       url = "github:bury-os/bury-quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    bury-hyprland = {
+      url = "github:bury-os/bury-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -38,11 +29,9 @@
   outputs = {
     self,
     nixpkgs,
-    hyprland,
-    hyprland-plugins,
-    split-monitor-workspaces,
     home-manager,
     bury-quickshell,
+    bury-hyprland,
     nvf,
     ... } @inputs :
     let
@@ -70,9 +59,6 @@
 
         specialArgs = {
           inherit
-            hyprland
-            hyprland-plugins
-            split-monitor-workspaces
             inputs
             myConfig
             ;
@@ -80,11 +66,11 @@
 
         modules = [
           ./configuration.nix
+          bury-hyprland.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               extraSpecialArgs = { inherit inputs myConfig; };
-              # backupFileExtension = "backup"; # Disabled to keep clean, enable if config symlinks are acting up.
 
               users.${myConfig.username} = import ./modules/home-manager;
             };

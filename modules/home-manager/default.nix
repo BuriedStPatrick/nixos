@@ -13,10 +13,10 @@
     ./terminal
     ./zsh
     ./git
-    ./hypr
     ./quickshell
     ./swaylock
     ./wallpapers
+    inputs.bury-hyprland.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

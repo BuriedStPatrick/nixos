@@ -3,18 +3,22 @@
     "aquamarine": {
       "inputs": {
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
+          "bury-hyprland",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -30,6 +34,28 @@
       "original": {
         "owner": "hyprwm",
         "repo": "aquamarine",
+        "type": "github"
+      }
+    },
+    "bury-hyprland": {
+      "inputs": {
+        "hyprland": "hyprland",
+        "hyprland-plugins": "hyprland-plugins",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794527499,
+        "narHash": "sha256-obrymumGr9lTvLbz9mw+eHlc05z0O/5j8A+laf4NArU=",
+        "owner": "bury-os",
+        "repo": "bury-hyprland",
+        "rev": "e305072534e58af4a1d1ff5106ea47fa06572cdb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bury-os",
+        "repo": "bury-hyprland",
         "type": "github"
       }
     },
@@ -109,14 +135,17 @@
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
+          "bury-hyprland",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -138,14 +167,17 @@
     "hyprgraphics": {
       "inputs": {
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -182,11 +214,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1794476999,
-        "narHash": "sha256-XgVpJTvzCjuMsz5NeYwLJ9KiCDNEnqAyDyXobiyVzug=",
+        "lastModified": 1794520086,
+        "narHash": "sha256-c/iIqiKwX9ysf0Vf92D82NvmoxhoUOEzpSzksH5SW0c=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "1989e6179b4de4db0af072e79e10236b92c1f110",
+        "rev": "8333bb7546c80e13b5c57e66ab72191d43b21505",
         "type": "github"
       },
       "original": {
@@ -198,34 +230,42 @@
     "hyprland-guiutils": {
       "inputs": {
         "aquamarine": [
+          "bury-hyprland",
           "hyprland",
           "aquamarine"
         ],
         "hyprgraphics": [
+          "bury-hyprland",
           "hyprland",
           "hyprgraphics"
         ],
         "hyprlang": [
+          "bury-hyprland",
           "hyprland",
           "hyprlang"
         ],
         "hyprtoolkit": [
+          "bury-hyprland",
           "hyprland",
           "hyprtoolkit"
         ],
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
+          "bury-hyprland",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -247,14 +287,17 @@
     "hyprland-plugins": {
       "inputs": {
         "hyprland": [
+          "bury-hyprland",
           "hyprland"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland-plugins",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland-plugins",
           "hyprland",
           "systems"
@@ -277,10 +320,12 @@
     "hyprland-protocols": {
       "inputs": {
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -302,14 +347,17 @@
     "hyprlang": {
       "inputs": {
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -331,30 +379,37 @@
     "hyprtoolkit": {
       "inputs": {
         "aquamarine": [
+          "bury-hyprland",
           "hyprland",
           "aquamarine"
         ],
         "hyprgraphics": [
+          "bury-hyprland",
           "hyprland",
           "hyprgraphics"
         ],
         "hyprlang": [
+          "bury-hyprland",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
+          "bury-hyprland",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -376,10 +431,12 @@
     "hyprutils": {
       "inputs": {
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -401,10 +458,12 @@
     "hyprwayland-scanner": {
       "inputs": {
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -426,14 +485,17 @@
     "hyprwire": {
       "inputs": {
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
@@ -467,28 +529,13 @@
         "type": "github"
       }
     },
-    "nix-filter": {
-      "locked": {
-        "lastModified": 1693833173,
-        "narHash": "sha256-hlMABKrGbEiJD5dwUSfnw1CQ3bG7KKwDV+Nx3bEZd7U=",
-        "owner": "numtide",
-        "repo": "nix-filter",
-        "rev": "ac030bd9ba98e318e1f4c4328d60766ade8ebe8b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "nix-filter",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794042290,
-        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
+        "lastModified": 1794386569,
+        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
+        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
         "type": "github"
       },
       "original": {
@@ -582,6 +629,7 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ]
@@ -602,34 +650,11 @@
     },
     "root": {
       "inputs": {
+        "bury-hyprland": "bury-hyprland",
         "bury-quickshell": "bury-quickshell",
         "home-manager": "home-manager",
-        "hyprland": "hyprland",
-        "hyprland-plugins": "hyprland-plugins",
         "nixpkgs": "nixpkgs_2",
-        "nvf": "nvf",
-        "split-monitor-workspaces": "split-monitor-workspaces"
-      }
-    },
-    "split-monitor-workspaces": {
-      "inputs": {
-        "hyprland": [
-          "hyprland"
-        ],
-        "nix-filter": "nix-filter"
-      },
-      "locked": {
-        "lastModified": 1794333413,
-        "narHash": "sha256-sEWlLcUkvEZ8SacJe7OW2m6BKwwGd/8E7TJD4ClzdmU=",
-        "owner": "zjeffer",
-        "repo": "split-monitor-workspaces",
-        "rev": "83cf651e024490d627c7cbdc03206af043ceca5b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zjeffer",
-        "repo": "split-monitor-workspaces",
-        "type": "github"
+        "nvf": "nvf"
       }
     },
     "systems": {
@@ -650,38 +675,47 @@
     "xdph": {
       "inputs": {
         "aquamarine": [
+          "bury-hyprland",
           "hyprland",
           "aquamarine"
         ],
         "hyprgraphics": [
+          "bury-hyprland",
           "hyprland",
           "hyprgraphics"
         ],
         "hyprland-protocols": [
+          "bury-hyprland",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
+          "bury-hyprland",
           "hyprland",
           "hyprlang"
         ],
         "hyprtoolkit": [
+          "bury-hyprland",
           "hyprland",
           "hyprtoolkit"
         ],
         "hyprutils": [
+          "bury-hyprland",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
+          "bury-hyprland",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
+          "bury-hyprland",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
+          "bury-hyprland",
           "hyprland",
           "systems"
         ]
