@@ -1,9 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  xdg.configFile."quickshell".source = ./config;
-
-  home.packages = with pkgs; [
-    quickshell
+  imports = [
+    inputs.bury-quickshell.homeManagerModules.default
   ];
 }

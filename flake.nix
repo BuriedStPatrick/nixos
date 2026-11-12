@@ -28,6 +28,11 @@
       url = "github:zjeffer/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
+
+    bury-quickshell = {
+      url = "github:bury-os/bury-quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -37,6 +42,7 @@
     hyprland-plugins,
     split-monitor-workspaces,
     home-manager,
+    bury-quickshell,
     nvf,
     ... } @inputs :
     let
