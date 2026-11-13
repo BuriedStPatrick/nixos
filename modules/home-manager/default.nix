@@ -13,9 +13,9 @@
     ./terminal
     ./zsh
     ./git
-    ./swaylock
     inputs.bury-quickshell.homeManagerModules.default
     inputs.bury-hyprland.homeManagerModules.default
+    inputs.bury-swaylock.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

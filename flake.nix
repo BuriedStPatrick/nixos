@@ -24,6 +24,11 @@
       url = "github:bury-os/bury-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    bury-swaylock = {
+      url = "github:bury-os/bury-swaylock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -32,6 +37,7 @@
     home-manager,
     bury-quickshell,
     bury-hyprland,
+    bury-swaylock,
     nvf,
     ... } @inputs :
     let
