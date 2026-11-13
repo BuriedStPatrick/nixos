@@ -1,6 +1,13 @@
 # NixOS Config
 
-This is my NixOS build config.
+This is my NixOS build config. I am still figuring out best practices and such and how to make things.
+
+The goals are to keep it:
+
+1. Portable.
+2. Easy to set up, build and maintain.
+3. Extensible with sensible defaults.
+4. Opinionated with consistent ways to configure things.
 
 ![Desktop screenshot](./docs/desktop.png)
 
