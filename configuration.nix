@@ -125,9 +125,6 @@
   # Install firefox at the system level.
   programs.firefox.enable = true;
 
-  # Enable ZSH at the system level.
-  # programs.zsh.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

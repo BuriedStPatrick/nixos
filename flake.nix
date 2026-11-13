@@ -82,6 +82,7 @@
 
         modules = [
           ./configuration.nix
+          terminal.nixosModules.default
           keymapp.nixosModules.default
           bury-hyprland.nixosModules.default
           home-manager.nixosModules.home-manager

@@ -5,9 +5,8 @@
 
   outputs = { self, nixpkgs, ... }: {
     nixosModules.default = { pkgs, ... }: {
-      users.defaultUserShell = pkgs.zsh;
-
       programs.zsh.enable = true;
+      users.defaultUserShell = pkgs.zsh;
     };
 
     homeManagerModules.default = { pkgs, ... }: {
@@ -15,7 +14,6 @@
       home.file.".zshrc".source = ./zsh/.zshrc;
 
       home.packages = with pkgs; [
-        zsh
         kitty
         eza
         fzf
