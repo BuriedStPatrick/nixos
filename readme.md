@@ -6,8 +6,7 @@ The goals are to keep it:
 
 1. Portable.
 2. Easy to set up, build and maintain.
-3. Extensible with sensible defaults.
-4. Opinionated with consistent ways to configure things.
+3. Opinionated with consistent ways to configure things.
 
 ![Desktop screenshot](./docs/desktop.png)
 
