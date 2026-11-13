@@ -13,9 +13,9 @@
     ./terminal
     ./zsh
     ./git
-    ./quickshell
     ./swaylock
     ./wallpapers
+    inputs.bury-quickshell.homeManagerModules.default
     inputs.bury-hyprland.homeManagerModules.default
   ];
 
