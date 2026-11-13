@@ -14,6 +14,10 @@
       url = "path:./modules/keymapp";
     };
 
+    terminal = {
+      url = "path:./modules/terminal";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +48,7 @@
     bury-swaylock,
     nvf,
     keymapp,
+    terminal,
     ... } @inputs :
     let
       system = "x86_64-linux";

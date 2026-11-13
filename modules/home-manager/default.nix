@@ -10,9 +10,9 @@
 
   # Submodules
   imports = [
-    ./terminal
     ./zsh
     ./git
+    inputs.terminal.homeManagerModules.default
     inputs.bury-quickshell.homeManagerModules.default
     inputs.bury-hyprland.homeManagerModules.default
     inputs.bury-swaylock.homeManagerModules.default
