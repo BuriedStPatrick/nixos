@@ -12,8 +12,11 @@ The goals are to keep it:
 ![Desktop screenshot](./docs/desktop.png)
 
 > Note that this assumes a lot at the moment:
-> 1. Your name is patrick
+> 1. Your name is patrick.
 > 2. You have your NixOS config at ~/nixos
+> 3. You have a thinkpad with my exact hardware specs.
+
+Obviously don't use this repo for more than inspiration for your own setup. I'm working on modularizing it into opinionated flakes.
 
 ## Build
 
