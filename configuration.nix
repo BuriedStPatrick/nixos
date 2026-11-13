@@ -74,11 +74,11 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  # # Configure keymap in X11
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
 
   # Enable flatpaks
   services.flatpak.enable = true;
@@ -103,7 +103,7 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -126,7 +126,7 @@
   programs.firefox.enable = true;
 
   # Enable ZSH at the system level.
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

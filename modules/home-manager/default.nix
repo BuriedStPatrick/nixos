@@ -10,7 +10,6 @@
 
   # Submodules
   imports = [
-    ./zsh
     ./git
     inputs.terminal.homeManagerModules.default
     inputs.bury-quickshell.homeManagerModules.default
