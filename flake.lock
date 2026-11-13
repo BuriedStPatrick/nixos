@@ -534,6 +534,20 @@
         "type": "github"
       }
     },
+    "keymapp": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "path": "./modules/keymapp",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/keymapp",
+        "type": "path"
+      },
+      "parent": []
+    },
     "mnw": {
       "locked": {
         "lastModified": 1784154424,
@@ -599,6 +613,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1794165970,
+        "narHash": "sha256-XuAV2cUwaod3Bt4XFVqiXz3v1w2ex16W6Sv4S7EWres=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ac588ef1c914865dad517b337ea0eb9694a4021c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1790046670,
         "narHash": "sha256-OJe62m8gZx4xEAQnMcqH1u31/uu4Xf0q2ykAEHZfgrg=",
         "rev": "6774f7bc253789b113a4f39285dc0fa100abeacc",
@@ -612,7 +642,7 @@
     },
     "nvf": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "nvf": "nvf_2"
       },
       "locked": {
@@ -629,7 +659,7 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "mnw": "mnw",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1794159704,
@@ -674,7 +704,8 @@
         "bury-quickshell": "bury-quickshell",
         "bury-swaylock": "bury-swaylock",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
+        "keymapp": "keymapp",
+        "nixpkgs": "nixpkgs_3",
         "nvf": "nvf"
       }
     },

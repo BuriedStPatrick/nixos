@@ -10,6 +10,10 @@
       url = "path:./modules/nvf";
     };
 
+    keymapp = {
+      url = "path:./modules/keymapp";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,6 +43,7 @@
     bury-hyprland,
     bury-swaylock,
     nvf,
+    keymapp,
     ... } @inputs :
     let
       system = "x86_64-linux";
@@ -58,7 +63,7 @@
           systemStateVersion
           homeStateVersion
           ;
-      };
+        };
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -72,6 +77,7 @@
 
         modules = [
           ./configuration.nix
+          keymapp.nixosModules.default
           bury-hyprland.nixosModules.default
           home-manager.nixosModules.home-manager
           {
@@ -92,6 +98,6 @@
             };
           }
         ];
+      };
     };
-  };
 }
