@@ -25,6 +25,7 @@
         kubectx
         gh
         azure-cli
+        wl-clipboard
       ];
     };
   };
