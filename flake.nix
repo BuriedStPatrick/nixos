@@ -94,6 +94,9 @@
             };
           }
           {
+            services.blueman.enable = true;
+          }
+          {
             environment.systemPackages = [
               nvf.packages."${system}".default
             ];
