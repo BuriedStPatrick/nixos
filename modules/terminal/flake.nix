@@ -22,7 +22,6 @@
         kitty
         eza
         fzf
-        gitui
         fastfetch
         btop
         gh
