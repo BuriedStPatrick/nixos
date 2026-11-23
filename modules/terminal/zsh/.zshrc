@@ -120,4 +120,7 @@ start_test_container_support() {
 # Kubectl plugins (krew)
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# Kubectl alias
+alias k='kubectl'
+
 if [ -e /home/patrick/.nix-profile/etc/profile.d/nix.sh ]; then . /home/patrick/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
