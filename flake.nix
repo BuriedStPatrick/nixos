@@ -16,6 +16,12 @@
 
     terminal = {
       url = "path:./modules/terminal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    development = {
+      url = "path:./modules/development";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {
@@ -49,6 +55,7 @@
     nvf,
     keymapp,
     terminal,
+    development,
     ... } @inputs :
     let
       system = "x86_64-linux";
@@ -83,6 +90,7 @@
         modules = [
           ./configuration.nix
           terminal.nixosModules.default
+          development.nixosModules.default
           keymapp.nixosModules.default
           bury-hyprland.nixosModules.default
           home-manager.nixosModules.home-manager

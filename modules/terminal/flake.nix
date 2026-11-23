@@ -5,7 +5,12 @@
 
   outputs = { self, nixpkgs, ... }: {
     nixosModules.default = { pkgs, ... }: {
-      programs.zsh.enable = true;
+      # At the system level, enable ZSH
+      programs.zsh = {
+        enable = true;
+      };
+
+      # At the system level, set the default shell for all users to ZSH
       users.defaultUserShell = pkgs.zsh;
     };
 
@@ -20,9 +25,6 @@
         gitui
         fastfetch
         btop
-        k9s
-        kubectl
-        kubectx
         gh
         azure-cli
         wl-clipboard

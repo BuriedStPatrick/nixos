@@ -99,6 +99,24 @@
         "type": "github"
       }
     },
+    "development": {
+      "inputs": {
+        "git": "git",
+        "kubernetes": "kubernetes",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./modules/development",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/development",
+        "type": "path"
+      },
+      "parent": []
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -130,6 +148,22 @@
         "type": "git",
         "url": "https://git.lix.systems/lix-project/flake-compat.git"
       }
+    },
+    "git": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "path": "./git",
+        "type": "path"
+      },
+      "original": {
+        "path": "./git",
+        "type": "path"
+      },
+      "parent": [
+        "development"
+      ]
     },
     "home-manager": {
       "inputs": {
@@ -536,7 +570,7 @@
     },
     "keymapp": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "path": "./modules/keymapp",
@@ -547,6 +581,22 @@
         "type": "path"
       },
       "parent": []
+    },
+    "kubernetes": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "path": "./kubernetes",
+        "type": "path"
+      },
+      "original": {
+        "path": "./kubernetes",
+        "type": "path"
+      },
+      "parent": [
+        "development"
+      ]
     },
     "mnw": {
       "locked": {
@@ -581,6 +631,38 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1795234589,
+        "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2786a2a72088ecf32aea5b3ec52099e6a7cff78f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1795234589,
+        "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2786a2a72088ecf32aea5b3ec52099e6a7cff78f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
         "lastModified": 1794165970,
         "narHash": "sha256-XuAV2cUwaod3Bt4XFVqiXz3v1w2ex16W6Sv4S7EWres=",
         "owner": "NixOS",
@@ -595,39 +677,39 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1795370043,
-        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1795370043,
-        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1795370043,
+        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
+        "lastModified": 1795370043,
+        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1790046670,
         "narHash": "sha256-OJe62m8gZx4xEAQnMcqH1u31/uu4Xf0q2ykAEHZfgrg=",
@@ -640,25 +722,9 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
-    "nixpkgs_6": {
-      "locked": {
-        "lastModified": 1794386569,
-        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nvf": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_6",
         "nvf": "nvf_2"
       },
       "locked": {
@@ -675,7 +741,7 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "mnw": "mnw",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1794159704,
@@ -719,9 +785,10 @@
         "bury-hyprland": "bury-hyprland",
         "bury-quickshell": "bury-quickshell",
         "bury-swaylock": "bury-swaylock",
+        "development": "development",
         "home-manager": "home-manager",
         "keymapp": "keymapp",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_5",
         "nvf": "nvf",
         "terminal": "terminal"
       }
@@ -743,7 +810,9 @@
     },
     "terminal": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "path": "./modules/terminal",
