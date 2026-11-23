@@ -3,8 +3,10 @@ export HISTFILE=~/.histfile
 export HISTSIZE=1000
 export HISTFILESIZE=9999
 export SAVEHIST=1000
-# Auto change directory. If directory is entered without any arguments, assumes it can be CD'ed into.
+
+# Stop the annoying beeps
 unsetopt beep
+
 zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit
