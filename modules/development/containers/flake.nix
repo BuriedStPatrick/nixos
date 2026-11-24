@@ -10,6 +10,7 @@
         # Enables symlink from docker => podman for CLI commands
         # NOTE: Does NOT create a symlink from /var/run/docker.sock => /run/podman/podman.sock
         dockerCompat = true;
+        dockerSocket.enable = true;
         # TODO: Figure out how to enable symlink to docker socket like this (for maximum compatibility):
         # sudo ln -sf /run/podman/podman.sock /var/run/docker.sock
         # HINT: Test socket with curl:
