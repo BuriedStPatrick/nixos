@@ -108,7 +108,16 @@
     isNormalUser = true;
     useDefaultShell = true;
     description = "Patrick Christensen";
-    extraGroups = [ "networkmanager" "wheel" "podman" "input" "audio" "video" "plugdev" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "podman"
+      "input"
+      "audio"
+      "video"
+      "plugdev"
+    ];
+
     packages = with pkgs; [
       kdePackages.kate
     ];
