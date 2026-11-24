@@ -12,10 +12,7 @@
   imports = [
     inputs.terminal.homeManagerModules.default
     inputs.development.homeManagerModules.default
-    inputs.bury-quickshell.homeManagerModules.default
-    inputs.bury-hyprland.homeManagerModules.default
-    inputs.bury-swaylock.homeManagerModules.default
-    inputs.bury-rofi.homeManagerModules.default
+    inputs.bury-os.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

@@ -29,23 +29,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    bury-quickshell = {
-      url = "github:bury-os/bury-quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    bury-hyprland = {
-      url = "github:bury-os/bury-hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    bury-swaylock = {
-      url = "github:bury-os/bury-swaylock";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    bury-rofi = {
-      url = "github:bury-os/bury-rofi";
+    bury-os = {
+      url = "github:bury-os/bury-os";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -54,10 +39,7 @@
     self,
     nixpkgs,
     home-manager,
-    bury-quickshell,
-    bury-hyprland,
-    bury-swaylock,
-    bury-rofi,
+    bury-os,
     nvf,
     keymapp,
     terminal,
@@ -98,8 +80,7 @@
           terminal.nixosModules.default
           development.nixosModules.default
           keymapp.nixosModules.default
-          bury-rofi.nixosModules.default
-          bury-hyprland.nixosModules.default
+          bury-os.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
