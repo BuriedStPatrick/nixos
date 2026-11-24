@@ -4,14 +4,17 @@
   inputs = {
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nvf = {
       url = "path:./modules/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     keymapp = {
       url = "path:./modules/keymapp";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     terminal = {
