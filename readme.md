@@ -17,6 +17,8 @@ The goals are to keep it:
 
 Obviously don't use this repo for more than inspiration for your own setup. I'm working on modularizing it into opinionated flakes.
 
+> NOTE: I'm moving a lot of my configs to [BuryOS][1], doing my best to document how to use each flake module. They are all entirely portable, but many also rely on home-manager.
+
 ## Build
 
 ```bash
@@ -38,3 +40,5 @@ nixedit
 ```bash
 nixclean
 ```
+
+[1]: https://github.com/orgs/bury-os/repositories
