@@ -22,6 +22,9 @@
       encoding = "utf-8";
     };
 
+    # Enable system clipboard integration
+    clipboard.providers.wl-copy.enable = true;
+
     statusline.lualine.enable = true;
 
     notes.orgmode = {
