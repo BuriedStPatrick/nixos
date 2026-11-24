@@ -15,6 +15,7 @@
     inputs.bury-quickshell.homeManagerModules.default
     inputs.bury-hyprland.homeManagerModules.default
     inputs.bury-swaylock.homeManagerModules.default
+    inputs.bury-rofi.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

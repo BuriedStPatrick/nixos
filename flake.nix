@@ -43,6 +43,11 @@
       url = "github:bury-os/bury-swaylock";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    bury-rofi = {
+      url = "github:bury-os/bury-rofi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -52,6 +57,7 @@
     bury-quickshell,
     bury-hyprland,
     bury-swaylock,
+    bury-rofi,
     nvf,
     keymapp,
     terminal,
@@ -92,6 +98,7 @@
           terminal.nixosModules.default
           development.nixosModules.default
           keymapp.nixosModules.default
+          bury-rofi.nixosModules.default
           bury-hyprland.nixosModules.default
           home-manager.nixosModules.home-manager
           {
