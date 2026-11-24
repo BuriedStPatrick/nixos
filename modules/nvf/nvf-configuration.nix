@@ -23,7 +23,11 @@
     };
 
     # Enable system clipboard integration
-    clipboard.providers.wl-copy.enable = true;
+    clipboard = {
+      enable = true;
+      providers.wl-copy.enable = true;
+      registers = "unnamedplus";
+    };
 
     statusline.lualine.enable = true;
 
