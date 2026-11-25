@@ -116,6 +116,7 @@
       "audio"
       "video"
       "plugdev"
+      "libvirtd"
     ];
 
     packages = with pkgs; [
